@@ -24,6 +24,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+ lintOptions {
+        abortOnError false
+    }
+
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
@@ -70,7 +78,4 @@ dependencies {
     // Kotlin
 //    compile dependencies.kotlinStdlib
     testCompile 'junit:junit:4.12'
-}
-kapt {
-    generateStubs = true
 }
